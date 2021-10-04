@@ -1,0 +1,198 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 96468992 bytes for Failed to commit area from 0x00000000a4a00000 to 0x00000000aa600000 of length 96468992.
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (./open/src/hotspot/os/windows/os_windows.cpp:3273), pid=9532, tid=13480
+#
+# JRE version:  (11.0.10+8) (build )
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (11.0.10+8-LTS-162, mixed mode, sharing, tiered, compressed oops, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -Xverify:none -XX:TieredStopAtLevel=1 com.educandoweb.course.CourseApplication
+
+Host: Intel(R) Core(TM) i5-3210M CPU @ 2.50GHz, 4 cores, 5G,  Windows 10 , 64 bit Build 19041 (10.0.19041.1202)
+Time: Mon Oct  4 12:06:32 2021 Hora oficial do Brasil elapsed time: 0.043569 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000002a9be6ca000):  JavaThread "Unknown thread" [_thread_in_vm, id=13480, stack(0x000000c05c100000,0x000000c05c200000)]
+
+Stack: [0x000000c05c100000,0x000000c05c200000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x613e6a]
+V  [jvm.dll+0x74c1ff]
+V  [jvm.dll+0x74d885]
+V  [jvm.dll+0x74df03]
+V  [jvm.dll+0x243b78]
+V  [jvm.dll+0x61125a]
+V  [jvm.dll+0x606165]
+V  [jvm.dll+0x2f85fc]
+V  [jvm.dll+0x2f8482]
+V  [jvm.dll+0x2fd136]
+V  [jvm.dll+0x33f6bf]
+V  [jvm.dll+0x33f0f0]
+V  [jvm.dll+0x2d5d08]
+V  [jvm.dll+0x2d6e66]
+V  [jvm.dll+0x727d17]
+V  [jvm.dll+0x7295bf]
+V  [jvm.dll+0x34c4a9]
+V  [jvm.dll+0x70d6b0]
+V  [jvm.dll+0x3b584f]
+V  [jvm.dll+0x3b7951]
+C  [jli.dll+0x520b]
+C  [ucrtbase.dll+0x21bb2]
+C  [KERNEL32.DLL+0x17034]
+C  [ntdll.dll+0x52651]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x000002a9bc415e60, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+
+Other Threads:
+  0x000002a9be6db800 GCTaskThread "GC Thread#0" [stack: 0x000000c05c200000,0x000000c05c300000] [id=4080]
+  0x000002a9be701000 ConcurrentGCThread "G1 Main Marker" [stack: 0x000000c05c300000,0x000000c05c400000] [id=13560]
+  0x000002a9be702000 ConcurrentGCThread "G1 Conc#0" [stack: 0x000000c05c400000,0x000000c05c500000] [id=7464]
+
+[error occurred during error reporting (printing all threads), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007fff298c4f57]
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x000002a9be6c7a20] Heap_lock - owner thread: 0x000002a9be6ca000
+
+Heap address: 0x00000000a4a00000, size: 1462 MB, Compressed Oops mode: Non-zero based: 0x00000000a4a00000
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (0 events):
+No events
+
+
+Dynamic libraries:
+0x00007ff704590000 - 0x00007ff70459f000 	C:\Hackthon\jdk-11.0.10\bin\java.exe
+0x00007fff66cd0000 - 0x00007fff66ec5000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007fff5f1e0000 - 0x00007fff5f1f5000 	C:\Program Files\Avast Software\Avast\aswhook.dll
+0x00007fff65350000 - 0x00007fff6540e000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007fff64a70000 - 0x00007fff64d39000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007fff64680000 - 0x00007fff64780000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007fff5e980000 - 0x00007fff5e998000 	C:\Hackthon\jdk-11.0.10\bin\jli.dll
+0x00007fff66580000 - 0x00007fff6662c000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007fff65fa0000 - 0x00007fff6603e000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007fff66130000 - 0x00007fff661cb000 	C:\WINDOWS\System32\sechost.dll
+0x00007fff65170000 - 0x00007fff6529a000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007fff66370000 - 0x00007fff66511000 	C:\WINDOWS\System32\USER32.dll
+0x00007fff64940000 - 0x00007fff64962000 	C:\WINDOWS\System32\win32u.dll
+0x00007fff66050000 - 0x00007fff6607b000 	C:\WINDOWS\System32\GDI32.dll
+0x00007fff64570000 - 0x00007fff6467b000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007fff53340000 - 0x00007fff535da000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.1110_none_60b5254171f9507e\COMCTL32.dll
+0x00007fff64d70000 - 0x00007fff64e0d000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007fff5d330000 - 0x00007fff5d33a000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007fff62530000 - 0x00007fff62545000 	C:\Hackthon\jdk-11.0.10\bin\VCRUNTIME140.dll
+0x00007fff65680000 - 0x00007fff656b0000 	C:\WINDOWS\System32\IMM32.DLL
+0x00007fff53fc0000 - 0x00007fff5405b000 	C:\Hackthon\jdk-11.0.10\bin\msvcp140.dll
+0x00007fff295e0000 - 0x00007fff2a0db000 	C:\Hackthon\jdk-11.0.10\bin\server\jvm.dll
+0x00007fff66240000 - 0x00007fff66248000 	C:\WINDOWS\System32\PSAPI.DLL
+0x00007fff58070000 - 0x00007fff58079000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x00007fff661d0000 - 0x00007fff6623b000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007fff53680000 - 0x00007fff536a7000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007fff62d70000 - 0x00007fff62d82000 	C:\WINDOWS\SYSTEM32\kernel.appcore.dll
+0x00007fff624c0000 - 0x00007fff624d0000 	C:\Hackthon\jdk-11.0.10\bin\verify.dll
+0x00007fff5d0b0000 - 0x00007fff5d294000 	C:\WINDOWS\SYSTEM32\DBGHELP.DLL
+0x00007fff5ce30000 - 0x00007fff5ce5c000 	C:\WINDOWS\SYSTEM32\dbgcore.DLL
+0x00007fff644e0000 - 0x00007fff64563000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+0x00007fff5ae10000 - 0x00007fff5ae38000 	C:\Hackthon\jdk-11.0.10\bin\java.dll
+0x00007fff5e900000 - 0x00007fff5e90a000 	C:\Hackthon\jdk-11.0.10\bin\jimage.dll
+0x00007fff5e6a0000 - 0x00007fff5e6b6000 	C:\Hackthon\jdk-11.0.10\bin\zip.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Hackthon\jdk-11.0.10\bin;C:\WINDOWS\SYSTEM32;C:\Program Files\Avast Software\Avast;C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.1110_none_60b5254171f9507e;C:\Hackthon\jdk-11.0.10\bin\server
+
+VM Arguments:
+jvm_args: -Xverify:none -XX:TieredStopAtLevel=1 
+java_command: com.educandoweb.course.CourseApplication
+java_class_path (initial): C:\Users\William\Desktop\Java\Projeto - Web services com Spring Boot e JPA - Hibernate\course\target\classes;C:\Users\William\.m2\repository\org\springframework\boot\spring-boot\2.5.5\spring-boot-2.5.5.jar;C:\Users\William\.m2\repository\org\springframework\boot\spring-boot-autoconfigure\2.5.5\spring-boot-autoconfigure-2.5.5.jar;C:\Users\William\.m2\repository\ch\qos\logback\logback-classic\1.2.6\logback-classic-1.2.6.jar;C:\Users\William\.m2\repository\ch\qos\logback\logback-core\1.2.6\logback-core-1.2.6.jar;C:\Users\William\.m2\repository\org\apache\logging\log4j\log4j-to-slf4j\2.14.1\log4j-to-slf4j-2.14.1.jar;C:\Users\William\.m2\repository\org\apache\logging\log4j\log4j-api\2.14.1\log4j-api-2.14.1.jar;C:\Users\William\.m2\repository\org\slf4j\jul-to-slf4j\1.7.32\jul-to-slf4j-1.7.32.jar;C:\Users\William\.m2\repository\jakarta\annotation\jakarta.annotation-api\1.3.5\jakarta.annotation-api-1.3.5.jar;C:\Users\William\.m2\repository\org\yaml\snakeyaml\1.28\snakeyaml-1.28.jar;C:\Users\William\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.12.5\jackson-databind-2.12.5.jar;C:\Users\William\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.12.5\jackson-annotations-2.12.5.jar;C:\Users\William\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.12.5\jackson-core-2.12.5.jar;C:\Users\William\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jdk8\2.12.5\jackson-datatype-jdk8-2.12.5.jar;C:\Users\William\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.12.5\jackson-datatype-jsr310-2.12.5.jar;C:\Users\William\.m2\repository\com\fasterxml\jackson\module\jackson-module-parameter-names\2.12.5\jackson-module-parameter-names-2.12.5.jar;C:\Users\William\.m2\repository\org\apache\tomcat\embed\tomcat-embed-core\9.0.53\tomcat-embed-core-9.0.53.jar;C:\Users\William\.m2\repository\org\apache\tomcat\embed\tomcat-embed-el\9.0.53\tomcat-embed-el-9.0.53.jar;C:\Users\William\.m2\repository\org\apac
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     bool BytecodeVerificationLocal                = false                                     {product} {command line}
+     bool BytecodeVerificationRemote               = false                                     {product} {command line}
+     intx CICompilerCount                          = 3                                         {product} {ergonomic}
+     uint ConcGCThreads                            = 1                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 4                                         {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 1048576                                   {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 96468992                                  {product} {ergonomic}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 1533018112                                {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 1048576                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 6973028                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 244685212                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 0                                      {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+     intx TieredStopAtLevel                        = 1                                         {product} {command line}
+     bool UseCompressedClassPointers               = true                                 {lp64_product} {ergonomic}
+     bool UseCompressedOops                        = true                                 {lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags
+ #1: stderr all=off uptime,level,tags
+
+Environment Variables:
+JAVA_HOME=C:\Hackthon\jdk-11.0.10
+PATH=C:\Program Files (x86)\VMware\VMware Player\bin\;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\maven\bin;C:\Hackthon\jdk-11.0.10\\bin;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\MySQL\MySQL Server 8.0\bin;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files\dotnet\;C:\Program Files (x86)\Yarn\bin\;C:\Program Files\PuTTY\;C:\Program Files\VideoLAN\VLC;C:\Ruby30-x64\bin;C:\Users\William\anaconda3;C:\Users\William\anaconda3\Library\mingw-w64\bin;C:\Users\William\anaconda3\Library\usr\bin;C:\Users\William\anaconda3\Library\bin;C:\Users\William\anaconda3\Scripts;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\William\AppData\Local\Programs\Python\Python38-32\Scripts\;C:\Users\William\AppData\Local\Programs\Python\Python38-32\;C:\Program Files\JetBrains\PyCharm Community Edition 2020.2.2\bin;;C:\Users\William\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\William\AppData\Roaming\npm;C:\Hackthon\jdk-11.0.10;C:\Program Files\heroku\bin;C:\Users\William\AppData\Local\Microsoft\WindowsApps;C:\Program Files\PostgreSQL\13\bin;C:\Users\William\.dotnet\tools;C:\Users\William\AppData\Local\Yarn\bin;C:\Program Files\MongoDB\Server\4.4\bin\
+USERNAME=William
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 58 Stepping 9, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 10 , 64 bit Build 19041 (10.0.19041.1202)
+Hyper-V role detected
+
+CPU:total 4 (initial active 4) (2 cores per cpu, 2 threads per core) family 6 model 58 stepping 9 microcode 0x21, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, clmul, erms, ht, tsc, tscinvbit, tscinv
+
+Memory: 4k page, system-wide physical 5845M (250M free)
+TotalPageFile size 11989M (AvailPageFile size 63M)
+current process WorkingSet (physical memory assigned to process): 9M, peak: 9M
+current process commit charge ("private bytes"): 49M, peak: 141M
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (11.0.10+8-LTS-162) for windows-amd64 JRE (11.0.10+8-LTS-162), built on Dec  8 2020 16:32:57 by "mach5one" with MS VC++ 15.9 (VS2017)
+
+END.
